@@ -2,8 +2,8 @@
 ;;gdb-UI配置
 ;;==============================================================
 (setq gdb-many-windows t)
-(load-library "multi-gud.el")
-(load-library "multi-gdb-ui.el")
+;;(load-library "multi-gud.el")
+;;(load-library "multi-gdb-ui.el")
 
 ;;==================================================
 ;;cedet插件设置
