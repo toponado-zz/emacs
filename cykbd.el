@@ -104,6 +104,11 @@
 	(setq frist (cdr (car (cdr alist)))))
 	(semantic-mrub-switch-tags first))))
 
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+(global-set-key (kbd "C-x <left>") 'windmove-left)
+
 ;;==================ecb的配置=================================
 ;;为了ecb窗口的切换
 (global-set-key [M-left] 'windmove-left)
