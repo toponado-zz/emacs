@@ -186,6 +186,7 @@
 (put 'sfp-page-up 'isearch-scroll t)
 (put 'sfp-page-up 'CUA 'move)
 (global-set-key (kbd "C-u") 'sfp-page-up)
+(global-set-key (kbd "C-j") 'sfp-page-down)
 ;;================================================================
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;自动插入括号;;;;;;;;;;;;;;
 ;;(show-paren-mode t)
