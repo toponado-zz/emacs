@@ -1,6 +1,6 @@
 
-(require 'redo)
-(global-set-key ( kbd "C-.") 'redo)
+;;(require 'redo)
+;;(global-set-key ( kbd "C-.") 'redo)
 (global-set-key ( kbd "C-o") 'forward-word)
 (global-set-key ( kbd "C-i") 'backward-word)
 
