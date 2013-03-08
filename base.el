@@ -123,17 +123,17 @@
 ;; (setq tab-stop-list (cons (* x 4) tab-stop-list)))
 
 ;;设置默认工作目录
-(setq default-directory "~/Dropbox/") 
+(setq default-directory "~/") 
 
 ;;===============================================================
 ;;外观设置
 ;;===============================================================
 ;; 去掉滚动条
-(set-scroll-bar-mode t)
+;;(set-scroll-bar-mode t)
 ;;关闭开启画面
 (setq inhibit-startup-message t)
 ;;禁用工具栏
-(tool-bar-mode nil)
+;;(tool-bar-mode nil)
 ;;禁用菜单栏
 ;;(menu-bar-mode nil)
 
@@ -298,4 +298,4 @@
 ;=====================  rect-mark设置结束 =========================
 ;
 (setq default-frame-alist
- '((height . 35)(width . 100)(menubar-lines . 20)(tool-bar-lines . 0)))
+ '((height . 35)(width . 100)(menubar-lines . 20)))

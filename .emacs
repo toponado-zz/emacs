@@ -22,7 +22,7 @@
 ;;;;读取脚本
 (load "base.el")
 (load "cykbd.el")
-(load "addon.el")
+;;(load "addon.el")
 
 ;;为了编程的配置
 (load "cycode.el")
