@@ -66,7 +66,8 @@
 ;;折叠和打开单个buffer的所有代码
 (define-key semantic-tag-folding-mode-map (kbd "C-_") 'semantic-tag-folding-fold-block)
 (define-key semantic-tag-folding-mode-map (kbd "C-+") 'semantic-tag-folding-show-block)
-
+(define-key semantic-tag-folding-mode-map (kbd "C-[") 'semantic-tag-folding-fold-block)
+(define-key semantic-tag-folding-mode-map (kbd "C-]") 'semantic-tag-folding-show-block)
 
 ;;==============================================================
 ;;ecb配置
