@@ -209,7 +209,7 @@
   "when cursor locate in top half window, this function will move cursor to middle of window,if cursor is in bottom half window, this function will scroll forward half of window"
   (interactive)
   (setq n (line-number-at-pos))
-  (setq halflen (/ (window-body-height) 2))
+  (setq halflen (/ (count-lines (window-start) (window-end) ) 2))
   (setq top_window_line (count-lines (window-start) (point-min) ))
   (setq middleline (+ top_window_line halflen))
   ;(message "n: %d halflen: %d middleline: %d" n halflen middleline)
