@@ -185,8 +185,41 @@
 	  next-screen-context-lines)))
 (put 'sfp-page-up 'isearch-scroll t)
 (put 'sfp-page-up 'CUA 'move)
+
+(defun window-half-height ()
+  (max 1 (/ (1- (window-height (selected-window))) 2)))
+
+(defun scroll-up-half ()
+  (interactive)
+  (scroll-up (window-half-height)))
+
+(defun scroll-down-half ()         
+  (interactive)                    
+  (scroll-down (window-half-height)))
+
+(defun move-to-window-line-middle ()
+  (interactive)
+  (let* ((wb-height (window-buffer-height (get-buffer-window)))
+        (actual-height (if (> wb-height (window-height))
+                           (window-height)
+                         wb-height)))
+    (move-to-window-line (/ actual-height 2))))
+
+(defun move_or_scroll_half()
+  "when cursor locate in top half window, this function will move cursor to middle of window,if cursor is in bottom half window, this function will scroll forward half of window"
+  (interactive)
+  (setq n (line-number-at-pos))
+  (setq halflen (/ (window-body-height) 2))
+  (setq top_window_line (count-lines (window-start) (point-min) ))
+  (setq middleline (+ top_window_line halflen))
+  ;(message "n: %d halflen: %d middleline: %d" n halflen middleline)
+  (if (< n middleline)
+		(move-to-window-line-middle)
+	  (scroll-up-half)))
+  
 (global-set-key (kbd "C-u") 'sfp-page-up)
-(global-set-key (kbd "C-j") 'sfp-page-down)
+(global-set-key (kbd "C-j") 'move_or_scroll_half)
+
 ;;================================================================
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;自动插入括号;;;;;;;;;;;;;;
 ;;(show-paren-mode t)
@@ -198,3 +231,8 @@
 ;;(global-set-key (kbd "“" ) 'skeleton-pair-insert-maybe)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+

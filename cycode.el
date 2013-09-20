@@ -61,13 +61,11 @@
 ;;(require 'semantic-tag-folding nil 'noerror)
 (global-semantic-tag-folding-mode 1)
 ;;折叠和打开整个buffer的所有代码
-(define-key semantic-tag-folding-mode-map (kbd "C--") 'semantic-tag-folding-fold-all)
-(define-key semantic-tag-folding-mode-map (kbd "C-=") 'semantic-tag-folding-show-all)
+(define-key semantic-tag-folding-mode-map (kbd "C-_") 'semantic-tag-folding-fold-all)
+(define-key semantic-tag-folding-mode-map (kbd "C-+") 'semantic-tag-folding-show-all)
 ;;折叠和打开单个buffer的所有代码
-(define-key semantic-tag-folding-mode-map (kbd "C-_") 'semantic-tag-folding-fold-block)
-(define-key semantic-tag-folding-mode-map (kbd "C-+") 'semantic-tag-folding-show-block)
-(define-key semantic-tag-folding-mode-map (kbd "C-[") 'semantic-tag-folding-fold-block)
-(define-key semantic-tag-folding-mode-map (kbd "C-]") 'semantic-tag-folding-show-block)
+(define-key semantic-tag-folding-mode-map (kbd "C--") 'semantic-tag-folding-fold-block)
+(define-key semantic-tag-folding-mode-map (kbd "C-=") 'semantic-tag-folding-show-block)
 
 ;;==============================================================
 ;;ecb配置
